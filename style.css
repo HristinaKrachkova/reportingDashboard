@@ -1,0 +1,241 @@
+body {
+    background-color: #292e45;
+}
+
+#twoam {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("LaneSplitting-770x440.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+#about {
+    width: 100vw;
+    background-color: #292e45;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.tagline1 {
+    font-family: 'lato', sans-serif;
+    font-size: 4em;
+    font-weight: 400;
+    font-style: italic;
+    color: rgb(245, 245, 245);
+    text-align: right;
+    padding-top: 70px;
+    padding-right: 50px;
+    text-shadow: 1px 1px black;
+}
+
+.tagline2 {
+    font-family: 'lato', sans-serif;
+    font-size: 7em;
+    letter-spacing: 7px;
+    line-height: 0.95em;
+    font-weight: 400;
+    color: rgb(245, 245, 245);
+    text-align: right;
+    text-shadow: 1px 1px black;
+    padding-top: 10px;
+    padding-right: 50px;
+}
+
+.line {
+    height: 3px;
+    width: 50px;
+    position: relative;
+    top: -12px;
+    display: inline-block;
+    background-color: #999;
+}
+
+.line.about {
+    background-color: rgb(245, 245, 245);
+}
+
+.section-title {
+    font-family: 'lato', sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section-title.about {
+    color: rgb(245, 245, 245);
+}
+
+.section-banner {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.dashboard {
+    width: 100%;
+    text-align: center;
+}
+
+#dashboard1,
+#dashboard2,
+#dashboard5,
+#dashboard6 {
+    width: 50%;
+    float: left;
+}
+
+#dashboard1,
+#dashboard2,
+#dashboard3,
+#dashboard4,
+#dashboard5,
+#dashboard6 {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 100px;
+}
+
+#dashboard3 line,
+#dashboard3 path,
+#dashboard5 line,
+#dashboard5 path,
+#dashboard6 line,
+#dashboard6 path {
+    stroke: #fff;
+    opacity: 0.5;
+}
+
+#dashboard3 text,
+#dashboard5 text,
+#dashboard6 text {
+    fill: #fff;
+}
+
+.axis .domain {
+    display: none;
+}
+
+.axis {
+    font-size: 1em
+}
+
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.node text {
+    font: 10px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+
+#line-chart {
+    border: 1px #ccc solid;
+    display: inline-block;
+}
+
+.pie {
+    position: relative;
+}
+
+.data-path:hover {
+    cursor: pointer;
+}
+
+.data-text {
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+    fill: #fff;
+}
+
+.data-text__value {
+    font-size: 4em;
+    -webkit-transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
+    opacity: 0;
+}
+
+.data-text__type {
+    font-size: 1em;
+    -webkit-transform: translateY(0.5rem);
+    transform: translateY(0.5rem);
+    opacity: 0;
+}
+
+.data-text--show {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation: fadeGraphTextIn 0.5s forwards;
+    animation: fadeGraphTextIn 0.5s forwards;
+}
+
+.data-text:hover {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@-webkit-keyframes fadeGraphTextIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeGraphTextIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    #dashboard1,
+    #dashboard2,
+    #dashboard3,
+    #dashboard4,
+    #dashboard5,
+    #dashboard6 {
+        display: block;
+        clear: both;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #twoam {
+        background-attachment: scroll;
+    }
+    .tagline1 {
+        font-size: 1.2em;
+    }
+    .tagline2 {
+        font-size: 2.8em;
+    }
+    .line {
+        display: none;
+    }
+}
