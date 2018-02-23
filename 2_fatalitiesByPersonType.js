@@ -30,7 +30,7 @@
     const color = d3.scaleOrdinal()
         .range(colorArray);
     const viewWidth = 600,
-        viewHeight = 300,
+        viewHeight = 350,
         thickness = 40;
 
     const svg = d3.select("#dashboard2")
@@ -53,7 +53,7 @@
 
     const arcGenerator = d3.arc()
         .innerRadius(0)
-        .outerRadius(140);
+        .outerRadius(130);
 
     const arcHover = d3.arc()
         .innerRadius(0)
